@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:1.6.15
+    hostname: mosquitto
+    container_name: mosquitto
+    restart: always
+    networks:
+      - backend
+    expose:
+      - "1883"
+      - "8883"
+    ports:
+      - "1883:1883"
+      - "8883:8883"
+    volumes:
+      - ./certs:/mosquitto/config/certs
+      - ./mosquitto-dev.conf:/mosquitto/config/mosquitto.conf
+      - mosquittodata:/mosquitto/data
+
+volumes:
+  mosquittodata:
+
+networks:
+  backend:
+

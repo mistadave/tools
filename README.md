@@ -1,4 +1,8 @@
-# OwnTracks Tools
+# Tools
+
+Here are some tools, scripts and other tips or tricks documented, which helps for some specific edge cases.
+
+Credits to [OwnTracks tools](https://github.com/owntracks/tools), which inspired for this repo and also used some scripts aswell.
 
 ### mosquitto-setup.sh
 
@@ -22,6 +26,7 @@ Via GTFS static and realtime Transit information is available.
 A demo for NYC public transport.
 
 ### Google/import-location-history.py
+
 Reads a JSON export of Google Location History from
 [Google Takeout](https://takeout.google.com/settings/takeout) and publishes all of its locations
 to MQTT. Useful for importing Google Location History into OwnTracks Recorder
